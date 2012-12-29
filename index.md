@@ -1,14 +1,11 @@
 ---
 layout: page
-# title: '!(cogito) ergo monkey'
-#title: I hope you enjoy my word soup
 title: '__̴ı̴̴̡̡̡ ̡͌l̡̡̡ ̡͌l̡*̡̡ ̴̡ı̴̴̡ ̡̡͡|̲̲̲͡͡͡ ̲▫̲͡ ̲̲̲͡͡π̲̲͡͡ ̲̲͡▫̲̲͡͡ ̲|̡̡̡ ̡ ̴̡ı̴̡̡ ̡͌l̡̡̡̡.___ '
 tagline: sweet home - rubiojr.rbel.co 
-#tagline: Supporting tagline
 ---
 {% include JB/setup %}
 
-Beautiful header ASCII art in this page from http://1lineart.kulaone.com
+_Beautiful ASCII art header in this page from [http://1lineart.kulaone.com](http://1lineart.kulaone.com)
 
 ## Writings
 
