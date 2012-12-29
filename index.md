@@ -1,11 +1,18 @@
 ---
 layout: page
-title: '__̴ı̴̴̡̡̡ ̡͌l̡̡̡ ̡͌l̡*̡̡ ̴̡ı̴̴̡ ̡̡͡|̲̲̲͡͡͡ ̲▫̲͡ ̲̲̲͡͡π̲̲͡͡ ̲̲͡▫̲̲͡͡ ̲|̡̡̡ ̡ ̴̡ı̴̡̡ ̡͌l̡̡̡̡.___ '
-tagline: sweet home - rubiojr.rbel.co 
 ---
 {% include JB/setup %}
 
-_Beautiful ASCII art header in this page from [http://1lineart.kulaone.com](http://1lineart.kulaone.com)
+<center>
+<h1>rbel.co</h1>
+<div style="font-size: 10px; color: gray;padding-bottom: 40px;">
+de los CO de toda la vida, maño (41.648791,-0.889581)
+</div>
+<img src="http://rbel.frameos.org/images/rbel.png"/>
+<div style="font-size: 10px; color: gray;padding-bottom: 40px;">
+Original Scirocco Picture from <a style="text-decoration: none; color: #333;" href="http://www.flickr.com/photos/mk1archive/1438507780/">mk1archive</a>
+</div>
+</center>
 
 ## Writings
 
@@ -14,4 +21,5 @@ _Beautiful ASCII art header in this page from [http://1lineart.kulaone.com](http
     <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
+
 
