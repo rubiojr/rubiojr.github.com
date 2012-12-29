@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Firefox add-ons that make me happy"
+title: "Great Firefox Add-ons"
 description: ""
 tagline: ""
 category: 
