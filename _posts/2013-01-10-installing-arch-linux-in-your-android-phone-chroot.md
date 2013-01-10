@@ -255,6 +255,7 @@ Good! the last step is to upgrade your brand new Arch Linux chroot :)
 
 ```
 chroot /sdcard/archlinux/ pacman -Syu # upgrades...
+chroot /sdcard/archlinux/ /bin/bash
 ```
 
 Enjoy!
