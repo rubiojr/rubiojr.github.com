@@ -59,8 +59,7 @@ You can get it from:
 <sub>
 <b>Note:</b> ARMv5 images for older phones
 <br/>
-There's a more generic ARMv5 image that should run on older phones,
-like my Galaxy I9000:
+There's a more generic ARMv5 image that should run on older phones:
 <br/>
 http://archlinuxarm.org/os/ArchLinuxARM-armv5te-latest.tar.gz
 <br/>
