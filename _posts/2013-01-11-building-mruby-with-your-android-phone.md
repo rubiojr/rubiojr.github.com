@@ -32,6 +32,7 @@ SSH to your android phone and change directory to the root of the SD card:
 Get the chroot image and chroot to it:
 
     mkdir mruby-build
+    # md5sum http://download.frameos.org/chroots/mruby-build-chroot.img.tar.gz.md5
     wget http://download.frameos.org/chroots/mruby-build-chroot.img.tar.gz
     tar xzf mruby-build-chroot.img.tar.gz
     mount -o loop mruby-build-chroot.img mruby-build
