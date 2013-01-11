@@ -3,7 +3,7 @@ layout: post
 title: "Building mruby-head with your Android Phone"
 description: ""
 category: hack
-tags: [mruby,ruby,android,archlinux]
+tags: [mruby, ruby, android, archlinux]
 ---
 {% include JB/setup %}
 
