@@ -8,7 +8,7 @@ tags: [mruby,ruby,android,archlinux]
 {% include JB/setup %}
 
 Building mruby-head for ARM computers with your Android phone using a pre-made
-Arch Linux chroot (which includes the required tools).
+Arch Linux chroot for ARMv7 phones (which includes the required tools).
 
 See [Installing Arch Linux in your Android phone](http://rubiojr.rbel.co/hack/2013/01/10/installing-arch-linux-in-your-android-phone-chroot/) if you are
 interested in the gory details.
