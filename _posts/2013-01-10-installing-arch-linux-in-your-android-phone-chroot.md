@@ -248,14 +248,14 @@ $ mount -o bind /dev/ /sdcard/archlinux/dev/
 $ mount -t proc proc /sdcard/archlinux/proc/
 $ mount -t sysfs sysfs /sdcard/archlinux/sys/
 $ mount -t devpts devpts /sdcard/archlinux/dev/pts/
-echo "nameserver 8.8.8.8" > /sdcard/archlinux/etc/resolv.conf
+$ echo "nameserver 8.8.8.8" > /sdcard/archlinux/etc/resolv.conf
 ```
 
 Good! the last step is to upgrade your brand new Arch Linux chroot :)
 
 ```
-chroot /sdcard/archlinux/ pacman -Syu # upgrades...
-chroot /sdcard/archlinux/ /bin/bash
+$ chroot /sdcard/archlinux/ pacman -Syu # upgrades...
+$ chroot /sdcard/archlinux/ /bin/bash
 ```
 
 Enjoy!
