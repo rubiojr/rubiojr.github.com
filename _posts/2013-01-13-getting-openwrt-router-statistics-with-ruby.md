@@ -4,12 +4,16 @@ title: "Getting OpenWRT router stats with ruby"
 description: ""
 tagline: ""
 category: hack 
-tags: [ruby, openwrt, luci]
+tags: [ruby, openwrt, luci, excon]
 ---
+
+OpenWRT routers are pretty awesome, and one of the things you can do is retrieve 
+router statistics from [LuCI](http://wiki.openwrt.org/doc/techref/luci) using 
+Ruby and an HTTP client library like [Excon](http://github.com/geemus/excon).
 
 ## Authentication and router status
 
-Authenticate, get router status and requequired auth data.
+Authenticate, get router status and the required auth data.
 
 {% highlight ruby %} 
 require 'excon'
@@ -26,7 +30,7 @@ parser = Yajl::Parser.new
 #
 # Authenticate
 #
-# Also returns dashboard router status information, i.e. 
+# Also returns router's dashboard status information, i.e. 
 # the info you see in the router 'Status -> Overview' dashboard
 #
 # Returned keys
@@ -48,10 +52,11 @@ r = Excon.post "http://#{host}/cgi-bin/luci?status=1",
                :body => "username=#{username}&password=#{password}",
                :headers => { 'Content-Type' => 'application/x-www-form-urlencoded' }
 
+# Do something with the data
 # pp parser.parse(r.body)
 {% endhighlight %}  
 
-The request returns some useful info we will use in further requests
+The request returns auth info we will use in further requests:
 
 {% highlight ruby %}
 # Get sysauth cookie and session path, will use it to send
@@ -60,12 +65,17 @@ sysauth, path = r.headers['Set-Cookie'].split
 path = path.split('=')[1..-1].join('=')
 {% endhighlight %}
 
-## Available info
+## Available statistics
 
-### Network interface stats
+Pretty much all the graphs you can see if you got to **'Overview -> Realtime Graphs'**
+in the OpenWRT web interface.
+
+### Network traffic 
+
+Data used by the graphs available in **'Status -> Realtime Graphs -> Traffic'** 
 
 {% highlight ruby %}
-# Network interface stats
+# Network traffic
 #
 # Returned data format: time, rx bytes, rx packets, tx bytes, tx packets
 #
@@ -82,6 +92,8 @@ pp parser.parse(r.body)
 {% endhighlight %} 
 
 ### System load
+
+Data used by the graphs available in **'Status -> Realtime Graphs -> Load'** 
 
 {% highlight ruby %}
 #
@@ -102,6 +114,8 @@ pp parser.parse(r.body)
 {% endhighlight %}
 
 ### Connections status
+
+Data used by the graphs available in **'Status -> Realtime Graphs -> Connections'** 
 
 {% highlight ruby %}
 # 
@@ -145,6 +159,8 @@ pp parser.parse r.body
 
 ### Wireless interface status
 
+Data used by the graphs available in **'Status -> Realtime Graphs -> Wireless'** 
+
 {% highlight ruby %}
 #
 # Wireless interface wl0 status
@@ -163,3 +179,7 @@ r = Excon.get "http://#{host}/#{path}/admin/status/realtime/wireless_status/wl0"
 # Do something with the data
 pp parser.parse r.body
 {% endhighlight %}
+
+## Source code used in this post
+
+Available here: [https://gist.github.com/4525640](https://gist.github.com/4525640)
