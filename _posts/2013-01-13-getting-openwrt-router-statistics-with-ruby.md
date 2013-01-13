@@ -9,8 +9,9 @@ tags: [ruby, openwrt, luci, excon]
 
 The following code has been tested with **OpenWrt Backfire 10.03.1**.
 
-OpenWRT routers are pretty awesome, and one of the things you can do is retrieve 
-router statistics from [LuCI](http://wiki.openwrt.org/doc/techref/luci) using 
+[OpenWRT](http://openwrt.org) routers are pretty awesome, and one of the things 
+you can do is retrieve router statistics from 
+[LuCI](http://wiki.openwrt.org/doc/techref/luci) using 
 Ruby and an HTTP client library like [Excon](http://github.com/geemus/excon).
 
 ## Authentication and router status
