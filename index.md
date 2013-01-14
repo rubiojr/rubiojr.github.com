@@ -4,15 +4,18 @@ layout: page
 {% include JB/setup %}
 
 <center>
-<h1>rbel.co</h1>
-<div style="font-size: 10px; color: gray;padding-bottom: 40px;">
-de los CO de toda la vida, maño (41.648791,-0.889581)
-</div>
-<img src="http://rbel.frameos.org/images/rbel.png"/>
-<div style="font-size: 10px; color: gray;padding-bottom: 40px;">
-Original Scirocco Picture from <a style="text-decoration: none; color: #333;" href="http://www.flickr.com/photos/mk1archive/1438507780/">mk1archive</a>
-</div>
+  <div style="width: 400px">
+    <img src="http://rubiojr.frameos.org/images/aaron.jpg"/>
+    <div style="font-weight: bold">Aaron Swartz</div>
+    <div>
+      <i>"World wanderers, we have lost a wise elder. Hackers for right, we are one down. Parents all, we have lost a child. Let us weep."</i>
+    </div>
+    <div style="text-align:right">
+      Tim Berners-Lee.
+    </div>
+  </div>
 </center>
+
 
 ## Writings
 
