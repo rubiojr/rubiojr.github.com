@@ -93,6 +93,10 @@ We're now using ARM GCC at this point.
 
 ## 7. Patch mruby build system
 
+**Update:** mruby build system is prepared for cross-compilation, so there's
+a much better way than patching it (See https://github.com/mruby/mruby/pull/741). 
+The tiny patch will work till I update this guide in any case.
+
 Create **$HOME/android/work/mruby/xcompile/mruby.diff** file and paste the following contents:
 
 ```diff
