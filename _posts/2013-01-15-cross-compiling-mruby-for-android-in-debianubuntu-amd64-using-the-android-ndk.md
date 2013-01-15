@@ -89,8 +89,6 @@ And source the env-p14.sh script so the build finds the toolchain:
 
 ## 5. Build mruby
 
-We'll need amd64 mruby binaries to build for ARM, so build mruby first:
-
     cd ~/android/work/mruby
     make
    
