@@ -66,7 +66,7 @@ Build mruby:
 
     make
 
-## Extra fun: copy mruby,mirb, mrubyc to the Android filesystem
+## Extra fun: copy mruby, mirb, mrbc to the Android filesystem
 
 Exit the chroot
 
