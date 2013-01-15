@@ -49,15 +49,6 @@ Open it with your favorite text editor and paste the following content:
 #!/bin/sh
 export NDK_ROOT=$HOME/android/toolchain-p14
 export PATH="$NDK_ROOT/bin:$PATH"
-export SYS_ROOT="$NDK_ROOT/sysroot"
-export CFLAGS="--sysroot=$SYS_ROOT"
-export CC="arm-linux-androideabi-gcc"
-export LD="arm-linux-androideabi-gcc"
-#export LDFLAGS=
-export AR="arm-linux-androideabi-ar"
-export RANLIB="arm-linux-androideabi-ranlib"
-export STRIP="arm-linux-androideabi-strip"
-export MRBC_BIN=$HOME/android/work/mruby/xcompile/mrbc
 ```
 
 ## 3. Download mruby
@@ -65,74 +56,52 @@ export MRBC_BIN=$HOME/android/work/mruby/xcompile/mrbc
     mkdir ~/android/work/ && cd ~/android/work
     git clone https://github.com/mruby/mruby
 
-## 4. Build mruby (for your current arch)
+## 4. Create a new build file
+
+Create a new build_config.rb file in ~/android/work/mruby:
+
+    rm ~/android/work/mruby/build_config.rb
+    vim ~/android/work/mruby/build_config.rb
+
+and paste the following contents:
+
+```ruby
+MRuby::Build.new do |conf|
+  conf.cc = ENV['CC'] || 'gcc'
+  conf.ld = ENV['LD'] || 'gcc'
+  conf.ar = ENV['AR'] || 'ar'
+  conf.cflags << (ENV['CFLAGS'] || %w(-g -O3 -Wall -Werror-implicit-function-declaration))
+  conf.ldflags << (ENV['LDFLAGS'] || %w(-lm))
+end
+
+MRuby::CrossBuild.new('arm') do |conf|
+  conf.cc = ENV['CC'] || 'arm-linux-androideabi-gcc'
+  conf.ld = ENV['LD'] || 'arm-linux-androideabi-gcc'
+  conf.ar = ENV['AR'] || 'arm-linux-androideabi-ar'
+  conf.cflags << (ENV['CFLAGS'] || %w(-g -O3 -Wall -Werror-implicit-function-declaration))
+end
+
+```
+
+And source the env-p14.sh script so the build finds the toolchain:
+
+    source ~/android/env-p14.sh
+
+## 5. Build mruby
 
 We'll need amd64 mruby binaries to build for ARM, so build mruby first:
 
     cd ~/android/work/mruby
     make
    
-## 5. Save mruby (i386) binaries
-
-Wait for the build to finish and copy the resulting binaries to
-~/android/work/mruby/xcompile/ (you'll need to adjust the MRBC_BIN in the env.sh
-script created in step #1 if you change this path): 
-
-    mkdir ~/android/work/mruby/xcompile
-    cp ~/android/work/mruby/bin/{mruby,mrbc,mirb} ~/android/work/mruby/xcompile/ 
-    # clean the build after that
-    make clean
-
-## 6. Setup the xcompile environment
-
-Source the env.sh script we created in step #1 to export the required ENV variables:
-
-    source ~/android/env-p14.sh
-
-We're now using ARM GCC at this point.
-
-## 7. Patch mruby build system
-
-**Update:** mruby build system is prepared for cross-compilation, so there's
-a much better way than patching it (See https://github.com/mruby/mruby/pull/741). 
-The tiny patch will work till I update this guide in any case.
-
-Create **$HOME/android/work/mruby/xcompile/mruby.diff** file and paste the following contents:
-
-```diff
-diff --git a/tasks/mruby_build.rake b/tasks/mruby_build.rake
-index de9e556..0750eb6 100644
---- a/tasks/mruby_build.rake
-+++ b/tasks/mruby_build.rake
-@@ -101,7 +101,7 @@ module MRuby
-     end
- 
-     def mrbcfile
--      @mrbcfile ||= exefile("build/host/bin/mrbc")
-+      @mrbcfile ||= (ENV['MRBC_BIN'] || exefile("build/host/bin/mrbc"))
-     end
- 
-     def compile_c(outfile, infile, flags=[], includes=[])
+## 6. Profit
 
 ```
-
-Patch the sources:
-
-    cd ~/android/work/mruby
-    patch -p1 < xcompile/mruby.diff
-
-## 8. Build the sources for ARM
-
-We're ready to cross-compile the sources:
-
-    make
-
-## 9. Profit
-
-```
-[9602][rubiojr.blueleaf] file bin/mruby 
-bin/mruby: ELF 32-bit LSB executable, ARM, version 1 (SYSV), dynamically linked (uses shared libs), not stripped
+[9602][rubiojr.blueleaf] file build/arm/bin/{mruby,mirb,mrbc}
+build/arm/bin/mruby: ELF 32-bit LSB executable, ARM, version 1 (SYSV), dynamically linked (uses shared libs), not stripped
+build/arm/bin/mirb:  ELF 32-bit LSB executable, ARM, version 1 (SYSV), dynamically linked (uses shared libs), not stripped
+build/arm/bin/mrbc:  ELF 32-bit LSB executable, ARM, version 1 (SYSV), dynamically linked (uses shared libs), not stripped
 ```
 
-mruby,mirb and mrbc Android (ARM) binaries are now available in the bin/ directory. 
+mruby,mirb and mrbc Android (ARM) binaries are now available in the **build/arm/bin** directory. 
 Copy them to your Android device and enjoy mruby!
