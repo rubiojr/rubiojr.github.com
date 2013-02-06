@@ -285,28 +285,29 @@ nodes = get_part_nodes(ring, part)
 
 **Swift developer documentation**
 
-http://docs.openstack.org/developer/swift/index.html
+[http://docs.openstack.org/developer/swift/index.html](http://docs.openstack.org/developer/swift/index.html)
 
 **Ring Overview**
 
-http://docs.openstack.org/developer/swift/overview_ring.html
+[http://docs.openstack.org/developer/swift/overview_ring.html](http://docs.openstack.org/developer/swift/overview_ring.html)
 
 **How the ring works in OpenStack Swift**
 
-http://swiftstack.com/blog/2012/11/21/how-the-ring-works-in-openstack-swift/
+[http://swiftstack.com/blog/2012/11/21/how-the-ring-works-in-openstack-swift](http://swiftstack.com/blog/2012/11/21/how-the-ring-works-in-openstack-swift)
 
 **How does a PUT to a swift object server look like**
 
-http://blog.chmouel.com/2012/02/06/anatomy-of-a-swift-put-query-to-object-server/
+[http://blog.chmouel.com/2012/02/06/anatomy-of-a-swift-put-query-to-object-server](http://blog.chmouel.com/2012/02/06/anatomy-of-a-swift-put-query-to-object-server/)
 
 **Building a Consistent Hashing Ring**
 
-http://greg.brim.net/page/building_a_consistent_hashing_ring.html
+[http://greg.brim.net/page/building_a_consistent_hashing_ring.html](http://greg.brim.net/page/building_a_consistent_hashing_ring.html)
 
 **Part-power performance**
 
-http://swiftstack.com/blog/2012/05/14/part-power-performance/
+[http://swiftstack.com/blog/2012/05/14/part-power-performance](http://swiftstack.com/blog/2012/05/14/part-power-performance/)
 
 **Swift Capacity Management**
 
-http://swiftstack.com/blog/2012/04/09/swift-capacity-management/
+[http://swiftstack.com/blog/2012/04/09/swift-capacity-management](http://swiftstack.com/blog/2012/04/09/swift-capacity-management)
+
