@@ -297,3 +297,11 @@ http://blog.chmouel.com/2012/02/06/anatomy-of-a-swift-put-query-to-object-server
 **Building a Consistent Hashing Ring**
 
 http://greg.brim.net/page/building_a_consistent_hashing_ring.html
+
+**Part-power performance**
+
+http://swiftstack.com/blog/2012/05/14/part-power-performance/
+
+**Swift Capacity Management**
+
+http://swiftstack.com/blog/2012/04/09/swift-capacity-management/
