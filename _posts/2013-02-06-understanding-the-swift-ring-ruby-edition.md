@@ -3,7 +3,7 @@ layout: post
 title: "Understanding the Swift Ring, Ruby Edition"
 description: ""
 category: hack
-tags: [openstack swift ruby]
+tags: [openstack, swift, ruby]
 ---
 {% include JB/setup %}
 
