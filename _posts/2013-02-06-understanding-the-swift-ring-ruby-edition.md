@@ -158,8 +158,8 @@ end
 
 ### Calculating the partition number
 
-Given some data from the deserialized ring (part_shift), the 
-swift_hash_path_suffix from /etc/swift/swift.conf and the full path
+Given the part\_shift from the deserialized ring, the 
+swift\_hash\_path\_suffix from /etc/swift/swift.conf and the full path
 to an object (i.e. /account/container/object.txt), return the
 partition the object belongs to.
 
