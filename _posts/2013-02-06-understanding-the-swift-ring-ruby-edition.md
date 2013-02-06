@@ -284,6 +284,6 @@ http://swiftstack.com/blog/2012/11/21/how-the-ring-works-in-openstack-swift/
 
 http://blog.chmouel.com/2012/02/06/anatomy-of-a-swift-put-query-to-object-server/
 
-**http://greg.brim.net/page/building_a_consistent_hashing_ring.html**
+**Building a Consistent Hashing Ring**
 
 http://greg.brim.net/page/building_a_consistent_hashing_ring.html
