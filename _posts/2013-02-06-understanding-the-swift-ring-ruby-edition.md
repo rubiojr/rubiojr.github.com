@@ -9,6 +9,8 @@ tags: [openstack, swift, ruby]
 
 **DISCLAIMER:** I'm not a Swift expert by any means. The information here is
 incomplete and may be inaccurate and/or wrong.
+There are some good articles at the end of this post written by some Swift 
+core developers. Make sure you read them first.
 
 ## Intro
 
