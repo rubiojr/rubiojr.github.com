@@ -107,7 +107,7 @@ def deserialize_v1(file)
 
   # read the magic number
   #
-  # returns R1NG in swift >= 1.6.0
+  # returns R1NG in swift >= 1.7.0
   magic = ring.read(4)
 
   # Read the ring version
