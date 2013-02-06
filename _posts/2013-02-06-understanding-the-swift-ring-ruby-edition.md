@@ -7,10 +7,10 @@ tags: [openstack, swift, ruby]
 ---
 {% include JB/setup %}
 
-## Intro
-
 **DISCLAIMER:** I'm not a Swift expert by any means. The information here is
 incomplete and may be inaccurate and/or wrong.
+
+## Intro
 
 In my crusade to understand the way Swift's ring works, I've 
 translated some of the python code from **swift.common.ring** and
