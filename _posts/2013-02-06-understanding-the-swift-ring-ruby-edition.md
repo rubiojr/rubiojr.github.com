@@ -10,8 +10,8 @@ tags: [openstack, swift, ruby]
 ## Intro
 
 In my crusade to understand the way Swift's ring works, I've 
-translated some of the python code from swift.common.ring and
-swift.common.utils to ruby.
+translated some of the python code from **swift.common.ring** and
+**swift.common.utils** to ruby.
 
 My goal is simple: understand the decisions Swift's proxy makes
 to upload a file 'bar.txt' to a container named 'foo', using my
@@ -31,17 +31,21 @@ Swift account. That is:
           upload foo bar.txt
 ```
 
-Swift creates **partitions** (directories) in every storage node to
+To understand the behaviour, you need to know that Swift
+creates **partitions** (directories) in every storage node to
 store the data (accounts, containers, objects) and when you upload
 **objects** (files) and/or create **containers**, the proxy needs to know
 which server (or servers, since we're using 3 replicas) to send the
 files and where to store the data (the target partition).
 
-This is the full path to an object, stored in a Swift storage node:
+For example, this is the full path to an object, stored in a
+Swift storage node:
 
 ```
 /srv/node/1/objects/165875/d00/a1fce4a02ddf6cca933a314c9a169d00/1360155539.49394.data
 ```
+
+The path contains multiple elements:
 
 **165875:** the partition number
 
@@ -53,6 +57,8 @@ This is the full path to an object, stored in a Swift storage node:
 
 All this information is hardcoded in Swift's ring files, so let's 
 read and understand it.
+
+**Note:** see the related reading section at the end of this article.
 
 ## The code
 
@@ -270,7 +276,11 @@ nodes = get_part_nodes(ring, part)
 
 **UNFINISHED:** this post needs to be polished and finished.
 
-## Related
+## Related reading
+
+**Swift developer documentation**
+
+http://docs.openstack.org/developer/swift/index.html
 
 **Ring Overview**
 
