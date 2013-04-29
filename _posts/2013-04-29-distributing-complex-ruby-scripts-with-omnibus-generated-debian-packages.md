@@ -7,10 +7,10 @@ tags: [debian, packaging, ruby]
 ---
 {% include JB/setup %}
 
-Let's say you have a nice little ruby script you want to distribute to a 
+Let's say I have a nice little ruby script I want to distribute to a 
 large number of Debian/Ubuntu hosts. 
 
-Ideally, all you have to do is to scp the script to the hosts 
+Ideally, all I have to do is to scp the script to the hosts 
 and 'apt-get install ruby' on them, then I can execute my script.
 Piece of cake.
 
