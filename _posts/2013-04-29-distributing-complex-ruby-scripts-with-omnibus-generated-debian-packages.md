@@ -235,6 +235,18 @@ We're now ready to build the Omnibus Debian package:
 
 If the build is successful, you should have a brand new Debian
 package in the pkg/ directory with Ruby 1.9.3, your script and all 
-the deps included. Time to distribute the package and do a bit Yak Shaving.
+the deps included. Time to distribute the package and do a bit of Yak Shaving.
+
+    $ dpkg -i pkg/my-scripts_0.0.1-1.ubuntu.12.04_amd64.deb
+
+    $ /opt/my-scripts/bin/my-super-duper.rb 
+    [2013-04-29 20:55:13] INFO  WEBrick 1.3.1
+    [2013-04-29 20:55:13] INFO  ruby 1.9.3 (2012-10-12) [x86_64-linux]
+    == Sinatra/1.4.2 has taken the stage on 4567 for development with backup from WEBrick
+    [2013-04-29 20:55:13] INFO  WEBrick::HTTPServer#start: pid=18220 port=4567
+
+    $ curl http://localhost:4567/foo -q
+    I required fog and sinatra just to say HI
+
 
 Pretty cool and somewhat simple, isn't it?
