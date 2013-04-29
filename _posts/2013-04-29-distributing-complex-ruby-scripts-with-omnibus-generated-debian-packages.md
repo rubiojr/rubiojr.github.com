@@ -40,9 +40,9 @@ version is 1.3.2 (shit).
 
 Same thing with Fog, packaged version is 1.3.1 and I need 1.10!
 
-What should you do? Some options to consider:
+What should I do? Some options to consider:
 
-1. Roll up your sleeves and use Pupppet/Chef, spend 1/2/3 days to properly
+1. Roll up my sleeves and use Pupppet/Chef, spend 1/2/3 days to properly
    create and test the required manifests/cookbooks to the deploy the 
    whole thing. If you think that installing the script deps was cumbersome,
    get ready for this, because things aren't getting any easier with 
