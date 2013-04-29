@@ -144,7 +144,7 @@ exclude "bundler\/git"
 ```
 
 Pay attention to the **dependency "my-scripts"**, we need to create the
-config/software/my-scripts.rb file to define individual software 
+**config/software/my-scripts.rb** file to define individual software 
 components that go into making the package.
 
 Create config/software/my-scripts.rb. It should look something like:
