@@ -35,8 +35,8 @@ end
 
 Now, [Fog](https://github.com/fog/fog) and [Sinatra](http://sinatrarb.com) have been packaged (oh yeah!) and are available
 in Ubuntu Precise repositories. Unfortunately, I need a newer Sinatra
-version coz I want Feature X, available in version 1.4 and the packaged
-version is 1.3.2 (shit).
+version because I want Feature X, available in version 1.4 and the packaged
+version is 1.3.2 (ouch!).
 
 Same thing with Fog, packaged version is 1.3.1 and I need 1.10!
 
@@ -48,16 +48,15 @@ What should I do? Some options to consider:
    get ready for this, because things aren't getting any easier with 
    Puppet/Chef.
 
-2. I'm wheel re-inventor. My favorite thing is a Bash script to do the 
+2. I'm a wheel re-inventor. My favorite thing is a Bash script to do the 
    work for me.
    Nothing wrong with the approach, perhaps old school and not
-   so kewl anymore but been there, done that, and I still do it from time
+   so kewl anymore but I've been there, done that, and I still do it from time
    to time, so not a big deal.
 
 3. Opscode omnibus-ruby to the rescue! 
-
-   What if there is a magic tool out there that builds and bundles the ruby 
-   ruby and ALL the dependencies in a single Debian package for you to install?
+   What if there is a magic tool out there that builds and bundles ruby 
+   and ALL the dependencies in a single Debian package for you to install?
    That will definitely shorten the manifest/cookbook development cycle
    making it simpler easier to debug and test. 
    
@@ -67,7 +66,7 @@ What should I do? Some options to consider:
    deps, the ruby runtime and their versions. I don't even need them
    installed.
 
-   See [http://github.com/opscode/omnibus-ruby](http://github.com/opscode/omnibus-ruby)
+   Enter [Omnibus](http://github.com/opscode/omnibus-ruby).
 
 ## Installing Omnibus
 
@@ -156,7 +155,7 @@ name "my-scripts"
 # 
 # The software files for these deps have been created for
 # us already (see https://github.com/opscode/omnibus-software)
-# and Omnibus will make use them if not found in our
+# and Omnibus will make use of them if not found in our
 # configuration.
 #
 dependency "libxml2"
@@ -211,7 +210,7 @@ add **my-super-duper.rb** script to it:
     /home/rubiojr/Work/omnibus-my-scripts
 
     [rubiojr.napoleon] mkdir scripts/
-    [rubiojr.napoleon] cp ~/Work/my-super-super.rb scripts/
+    [rubiojr.napoleon] cp ~/Work/my-super-duper.rb scripts/
 
 The contents of the script included:
 
@@ -247,6 +246,5 @@ the deps included. Time to distribute the package and do a bit of Yak Shaving.
 
     $ curl http://localhost:4567/foo -q
     I required fog and sinatra just to say HI
-
 
 Pretty cool and somewhat simple, isn't it?
