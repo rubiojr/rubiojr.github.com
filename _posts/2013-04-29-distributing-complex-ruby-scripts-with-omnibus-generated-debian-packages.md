@@ -81,7 +81,8 @@ now the default ruby, IIRC).
 
 You should run these commands as root, or use sudo. Even better, use a
 clean environment (lxc, vagrant, chroot, etc) to follow the steps if
-possible.
+possible. Note that **Omnibus has a Vagrant plugin** and the integration is
+awesome, making things even easier. Topic for another post, perhaps.
 
 ### Install the required packages
 
