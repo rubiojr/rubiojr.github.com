@@ -55,6 +55,7 @@ What should I do? Some options to consider:
    to time, so not a big deal.
 
 3. Opscode omnibus-ruby to the rescue! 
+
    What if there is a magic tool out there that builds and bundles ruby 
    and ALL the dependencies in a single Debian package for you to install?
    That will definitely shorten the manifest/cookbook development cycle
