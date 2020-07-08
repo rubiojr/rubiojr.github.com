@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/rubiojr
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://rbel.co
+  * I am rubiojr (https://keybase.io/rubiojr) on keybase.
+  * I have a public key ASAPwoAo8uWAsH16mbHIxTrga4BOyVXz-RleW1TfHf8RTwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01201315c0afe06893e4b87fbf02fce5e9e5426fd5e28634a015e300d593285f93e70a",
+      "host": "keybase.io",
+      "kid": "01200fc28028f2e580b07d7a99b1c8c53ae06b804ec955f3f9195e5b54df1dff114f0a",
+      "uid": "93e98f3c46b3d92daf1ce996b447ca00",
+      "username": "rubiojr"
+    },
+    "merkle_root": {
+      "ctime": 1574073821,
+      "hash": "c338de14c2d1303f8c7466de3fe47c767be79a3d9a6210431d50836e279c4d3152da7b6e39da93cd6cf48575db60ff83ac08e236ca31b9b3dbbc99456cd28f18",
+      "hash_meta": "bfb3d59337390dce17d0798991b676a5dbbc55e38c9a82afb45385a6d360b41e",
+      "seqno": 10047411
+    },
+    "service": {
+      "entropy": "r/qBbj7VWE7KENZ6sD8YXmZY",
+      "hostname": "rbel.co",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.0.0"
+  },
+  "ctime": 1574073837,
+  "expire_in": 504576000,
+  "prev": "ff549468b98704efea4f6d39bc0c5d6d7996802c6100aff8253c5a2fcf96e0c2",
+  "seqno": 110,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgD8KAKPLlgLB9epmxyMU64GuATslV8/kZXltU3x3/EU8Kp3BheWxvYWTESpcCbsQg/1SUaLmHBO/qT205vAxdbXmWgCxhAK/4JTxaL8+W4MLEIOtzKLPKaJ3fgBVSGQxSL9rU83xuSOO5YUiG+nyZEwfdAgHCo3NpZ8RAwKVVJSif9sx4Fp//HrRE5/EKfdyEBaUGG+0L4yflral9emXjE/XA1l9zhQA0OUmryMvzOUPbzhj4c7zezYkZCqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIMMsvzHLlra+u31Dcq4yqiywMkkerrXcqC8rqx9ypzr0o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/rubiojr
+
+==================================================================

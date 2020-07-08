@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://rbel.co/</loc>
+    <lastmod>2020-01-06T23:28:31+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rbel.co/tools/</loc>
+    <lastmod>2020-01-06T23:28:31+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rbel.co/about/</loc>
+    <lastmod>2020-01-06T23:06:23+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rbel.co/posts/</loc>
+    <lastmod>2020-01-06T22:59:56+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rbel.co/posts/first-post/</loc>
+    <lastmod>2020-01-06T22:59:56+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rbel.co/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rbel.co/series/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rbel.co/tags/</loc>
+  </url>
+  
+</urlset>
